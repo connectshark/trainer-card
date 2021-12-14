@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: 'Roboto Mono', monospace;
+  color: #fff;
 }
 .container{
   background-color: #ccc;
@@ -31,11 +33,11 @@
 }
 .card .front{
   transform: rotateY(0);
-  background-color: #fff;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 .card .back{
   transform: rotateY(180deg);
-  background-color: #333;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 .card:hover .front{
   transform: rotateY(180deg);
@@ -44,7 +46,58 @@
   transform: rotateY(360deg);
 }
 
-.card .front h1{
+.card .front h2{
   font-size: 30px;
   line-height: 400px;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+.card .back h1{
+  font-size: 30px;
+  line-height: 2;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.card .back main{
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  padding: 15px 0;
+  border-radius: 0 0 100px 0;
+}
+.card .back main img{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  box-shadow: 0 0 0 3px #fff;
+  border-radius: 50%;
+}
+
+.card .back section .pokemon{
+  display: inline-block;
+  width: 30%;
+}
+
+.card .back section .pokemon img{
+  width: 100%;
+}
+
+.card .back section .pokemon figcaption{
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+  transition: color .3s;
+  letter-spacing: -1px;
+}
+
+@keyframes shake {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(10px);
+  }
+}
+
+.card .back section .pokemon:hover img{
+  animation: shake .3s alternate infinite;
 }

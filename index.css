@@ -23,6 +23,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: transform 1s ease;
   width: 100%;
@@ -30,6 +31,10 @@
   border-radius: 20px;
   overflow: hidden;
   backface-visibility: hidden;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
 }
 .card .front{
   transform: rotateY(0);
